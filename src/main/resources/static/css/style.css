@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFF;
+}
+
+div#container {
+    width: 1020px;
+    margin: auto;
+    background: #FFF;
+    box-shadow: 0 0 10px 0px rgba(12, 3, 25, 0.6);
+}
+
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("/font/MyriadPro-Regular.otf") format('truetype');
+} 
+
+@font-face {
+    font-family: "MyriadPro-Light";
+    src: url("/font/MyriadPro-Light.otf") format('truetype');
+} 
+
+/*FORM*/
+
+#invoiceForm {
+    color: #303333;
+}
+
+h4, h3 {
+    font-family: MyriadPro-Regular;
+    padding: 5px;
+}
+
+h4 {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+h3 {
+    text-align: center; 
+}
+
+.title {
+    margin-top: 10px;
+}
+
+.label1 {
+    font-family: MyriadPro-Light;
+    /*background: blue;*/
+}
+
+.p1 {
+    display: inline-block;
+    margin-left: 20px;
+    padding-bottom: 15px;
+}
+
+div#customer_container, div#supplier_container, div#order_container, div#trans_comp_container {
+    margin: 20px 40px;
+    padding: 5px;
+}
+
+.input_class {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #E67E22;
+    border-radius: 5px;
+    font-family: MyriadPro-Light;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#submit {
+    width: 100%;
+    text-align: center;
+}
+
+.submit_class {
+    width: 115px;
+    height: 38px;
+    font-size: 16px;
+    padding: 3px 5px 3px 5px;
+    background: #FFF;
+    border: 1px solid #E67E22;
+    border-radius: 5px;
+    color: #E67E22;
+    cursor: pointer;
+    font-family: MyriadPro-Light;
+}
+
+#required_id {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+/*RESULTS*/
+
+#download {
+   font-family: MyriadPro-Light;
+   margin: 50px 20px;
+}
+
+/*CLEAR FIX*/
+
+.clearfix {
+    clear: both;
+}
+
+/*RED STAR*/
+
+.red_star {
+    color: red;
+    margin-left: 3px;
+    font-family: MyriadPro-Light;
+}
+
+/*ERROR*/
+
+.error {
+    float: left;
+    color: red;
+    font-family: MyriadPro-Light;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/*FOOTER*/
+
+footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #E67E22;
+}
+
+footer p {
+    color: #FFF;
+    font-family: MyriadPro-Light;
+}
