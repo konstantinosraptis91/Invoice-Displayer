@@ -6,10 +6,9 @@
 package invoice.displayer;
 
 import invoice.displayer.client.InvoiceClient;
-import invoice.displayer.entity.EntityList;
-import invoice.displayer.entity.Invoice;
-import invoice.displayer.util.Constants;
-import java.util.Date;
+import invoice.displayer.entity.InvoiceList;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,22 +24,27 @@ import org.springframework.boot.CommandLineRunner;
 @SpringBootApplication
 public class Application {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+//    private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
-    @Autowired
-    private InvoiceClient invoiceClient;
+//    @Autowired
+//    private InvoiceClient invoiceClient;
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Application.class, args);
     }
 
-    @Bean
-    public CommandLineRunner run() throws Exception {
-        return args -> {
-            //Invoice invoice = invoiceClient.getInvoice(1);
-            EntityList<Invoice> invoices = invoiceClient.getInvoices();
-            LOGGER.info(invoices.getItems().toString() + "", Constants.LOG_DATE_FORMAT.format(new Date()));
-        };
-    }
+//    @Bean
+//    public CommandLineRunner run() throws Exception {
+//        return args -> {
+//            InvoiceList invoices = invoiceClient.getInvoices();
+//            
+//            JAXBContext jaxbContext = JAXBContext.newInstance(InvoiceList.class);
+//            Marshaller marshaller = jaxbContext.createMarshaller();
+//            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//            marshaller.marshal(invoices, System.out);
+//
+//            LOGGER.info(invoices.getInvoice().toString() + "", Constants.LOG_DATE_FORMAT.format(new Date()));
+//        };
+//    }
 
 }

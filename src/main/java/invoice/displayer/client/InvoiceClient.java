@@ -5,8 +5,8 @@
  */
 package invoice.displayer.client;
 
-import invoice.displayer.entity.EntityList;
 import invoice.displayer.entity.Invoice;
+import invoice.displayer.entity.InvoiceList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -32,8 +32,16 @@ public class InvoiceClient {
         return restOperations.getForObject(URL + "/{id}", Invoice.class, id);
     }
     
-    public EntityList<Invoice> getInvoices() {
-        return restOperations.getForObject(URL, EntityList.class);
+//    public EntityList<Invoice> getInvoices() {
+//        return restOperations.getForObject(URL, EntityList.class);
+//    }
+    
+    public InvoiceList getInvoices() {
+        return restOperations.getForObject(URL, InvoiceList.class);
     }
+    
+//    public List<Invoice> getInvoices() {
+//        return restOperations.getForObject(URL, List.class);
+//    }
     
 }
