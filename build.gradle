@@ -11,14 +11,13 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'application'
+
+mainClassName = "invoice.displayer.Application"
 
 jar {
-    baseName = 'Invoice-Displayer'
+    baseName = 'invoice-displayer'
     version =  '0.1.0'
-}
-
-bootRun {
-    addResources = true
 }
 
 repositories {

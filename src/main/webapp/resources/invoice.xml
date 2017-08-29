@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<invoice id="1">
+    <customer id="1">
+        <fullName>Customer_Full_Name</fullName>
+        <address>Customer_Address</address>
+        <phoneNumber>6946946946</phoneNumber>
+        <email>customer@customer.com</email>
+    </customer>
+    <order id="1">
+        <product>Pc</product>
+        <totalCost>6350.0</totalCost>
+        <shippingDate>28 August, 2017</shippingDate>
+    </order>
+    <supplier id="1">
+        <fullName>Supplier_Full_Name</fullName>
+        <address>Supplier_Address</address>
+        <phoneNumber>6936936936</phoneNumber>
+        <email>supplier@supplier.com</email>
+    </supplier>
+    <transporter id="1">
+        <name>Transport_Co</name>
+        <address>Transport_Co_Address</address>
+        <phoneNumber>6986986986</phoneNumber>
+        <email>transport.co@transport.com</email>
+    </transporter>
+</invoice>

@@ -129,6 +129,15 @@ div#customer_container, div#supplier_container, div#order_container, div#trans_c
     margin-top: 2px;
 }
 
+/*XSLT*/
+
+#xsltLinks {
+    font-family: MyriadPro-Light;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 /*FOOTER*/
 
 footer {
