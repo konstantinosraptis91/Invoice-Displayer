@@ -4,11 +4,13 @@
     <xsl:template match="/">
         <html>
             <head>
-                <title>Invoice</title>
+                <title>Invoice Displayer</title>
+                <link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon"/>
+                <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon"/>
             </head>
             <body>
                 <center>
-                    <h2>Invoice</h2>
+                    <h3>Invoice for Customer</h3>
                     <table border="1">
                         <!-- header row -->
                         <tr>

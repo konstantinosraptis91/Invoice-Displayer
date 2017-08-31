@@ -33,6 +33,4 @@ public class InvoiceList {
         this.invoices = invoices;
     }
 
-    
-
 }
