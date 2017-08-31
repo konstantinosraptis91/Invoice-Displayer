@@ -26,17 +26,9 @@ public class InvoiceClient {
     public Invoice getInvoice(int id) {
         return restOperations.getForObject(URL + "/{id}", Invoice.class, id);
     }
-    
-//    public EntityList<Invoice> getInvoices() {
-//        return restOperations.getForObject(URL, EntityList.class);
-//    }
-    
+        
     public InvoiceList getInvoices() {
         return restOperations.getForObject(URL, InvoiceList.class);
     }
-    
-//    public List<Invoice> getInvoices() {
-//        return restOperations.getForObject(URL, List.class);
-//    }
-    
+   
 }

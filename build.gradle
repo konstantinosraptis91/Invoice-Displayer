@@ -16,8 +16,8 @@ apply plugin: 'application'
 mainClassName = "invoice.displayer.Application"
 
 jar {
-    baseName = 'invoice-displayer'
-    version =  '0.1.0'
+    baseName = 'Invoice-Displayer'
+    version =  '0.2.0'
 }
 
 repositories {
@@ -29,6 +29,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-devtools")
     compile("org.hibernate:hibernate-validator")
     compile("org.apache.tomcat.embed:tomcat-embed-el")
     compile("org.apache.commons:commons-io:1.3.2")
