@@ -1,4 +1,4 @@
-package invoice.displayer.entity;
+package invoice.displayer.model;
 
 import java.util.ArrayList;
 import java.util.List;

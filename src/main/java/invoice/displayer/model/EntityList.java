@@ -1,7 +1,7 @@
 /*
  * Generic wrapper class -> this class help controller wrap all forms in one object
  */
-package invoice.displayer.entity;
+package invoice.displayer.model;
 
 import java.util.ArrayList;
 import java.util.List;

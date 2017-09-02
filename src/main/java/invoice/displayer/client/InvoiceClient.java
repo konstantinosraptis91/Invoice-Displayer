@@ -1,7 +1,8 @@
 package invoice.displayer.client;
 
-import invoice.displayer.entity.Invoice;
-import invoice.displayer.entity.InvoiceList;
+import invoice.displayer.model.Invoice;
+import invoice.displayer.model.InvoiceList;
+import invoice.displayer.util.Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -23,12 +24,12 @@ public class InvoiceClient {
         this.URL = url;
     }
     
-    public Invoice getInvoice(int id) {
-        return restOperations.getForObject(URL + "/{id}", Invoice.class, id);
+    public Invoice getInvoice(int id, Entity e) {
+        return restOperations.getForObject(URL + "/{id}" + "?entity=" + e.getValue(), Invoice.class, id);
     }
         
-    public InvoiceList getInvoices() {
-        return restOperations.getForObject(URL, InvoiceList.class);
+    public InvoiceList getInvoices(Entity e) {
+        return restOperations.getForObject(URL + "?entity=" + e.getValue(), InvoiceList.class);
     }
    
 }

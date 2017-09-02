@@ -10,7 +10,6 @@
             </head>
             <body>
                 <center>
-                    <h3>Invoice for Customer</h3>
                     <table border="1">
                         <!-- header row -->
                         <tr>

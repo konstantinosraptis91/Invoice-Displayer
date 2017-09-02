@@ -6,7 +6,7 @@
 //
 
 
-package invoice.displayer.entity;
+package invoice.displayer.model;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

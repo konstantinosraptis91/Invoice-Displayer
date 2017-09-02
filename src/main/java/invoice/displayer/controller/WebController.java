@@ -1,11 +1,12 @@
 package invoice.displayer.controller;
 
-import invoice.displayer.entity.Invoice;
+import invoice.displayer.model.Invoice;
 import java.io.IOException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
 import invoice.displayer.client.InvoiceClient;
+import invoice.displayer.util.Entity;
 import java.io.File;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,10 +37,27 @@ public class WebController {
         return new ModelAndView("index");
     }
 
-    @RequestMapping(value = "/viewXSLT")
-    public ModelAndView viewXSLT(HttpServletRequest request,
+    @RequestMapping(value = "/view-invoice-xslt-for-customer")
+    public ModelAndView viewInvoiceXSLTForCustomer(HttpServletRequest request,
             HttpServletResponse response) throws IOException, JAXBException {
-        Invoice invoice = invoiceClient.getInvoice(1);
+        return getModelAndViewFor(1, Entity.CUSTOMER, request);
+    }
+       
+    @RequestMapping(value = "/view-invoice-xslt-for-supplier")
+    public ModelAndView viewInvoiceXSLTForSupplier(HttpServletRequest request,
+            HttpServletResponse response) throws IOException, JAXBException {
+        return getModelAndViewFor(1, Entity.SUPPLIER, request);
+    }
+    
+    @RequestMapping(value = "/view-invoice-xslt-for-transportation-company")
+    public ModelAndView viewInvoiceXSLTForTransportationCompany(HttpServletRequest request,
+            HttpServletResponse response) throws IOException, JAXBException {
+        return getModelAndViewFor(1, Entity.TRANSPORTATION_COMPANY, request);
+    }
+    
+    private ModelAndView getModelAndViewFor(int id, Entity e, 
+            HttpServletRequest request) throws IOException, JAXBException {
+        Invoice invoice = invoiceClient.getInvoice(id, e);
           
         // builds absolute path of the XML file
         String xmlFile = "resources/invoice.xml";
@@ -62,5 +80,5 @@ public class WebController {
         
         return model;
     }
-            
+    
 }
